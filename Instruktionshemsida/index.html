@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Instruktionshemsida (Arvid Börgeson)</title>
+    <div class="hamburgmeny">
+
+    </div>
+    <div class="headbar">
+        <li>once</li>
+        <li>dose</li>
+        <li>tres</li>
+    </div>
+    <header>hee hee</header>
+</head>
+<body>
+
+    <button onclick="openModal('login')">Login</button>
+    <button onclick="openModal('signup')">Skapakonto</button>
+    
+    <div id="loginModal" class="modal">
+     <div class="modal-content">
+         <span class="close" onclick="closeModal('login')">&times;</span>
+         <h2>Login</h2>
+         <form id="loginForm">
+             <input type="text" placeholder="Användarnamn" id="username" required>
+             <input type="password" placeholder="Lösenord" id="password">
+             <button type="submit">Login</button>
+         </form>
+     <div id="result"></div>
+     </div>
+    </div>
+
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('signup')">&times;</span>
+            <h2>Skapa konto</h2>
+        <form id="signupForm">
+            <input type="text" placeholder="Användarnamn" id="username" required>
+            <input type="password" placeholder="Lösenord" id="password">
+            <button type="submit">Skapa konto</button>
+        </form>
+        <div id="signupResult"></div>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
