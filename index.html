@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<lang="en">
+  <link rel="stylesheet" href="index.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin_page Instruktiondb</title>
+
+</head>
+<header>
+<div class="header-bar"> 
+  <div class="logo">Instruktion webbsite</div>
+  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+  <div class="nav-menu" id="nav-menu">
+        <p class="header-item"  onclick="showForm('home-form')"  >Admin</p> <!-- använder showform functionen för att visa formen med id home, osv -->
+        <p class="header-item"  onclick="showForm('beginner-form')"  >beginner</p>
+        <p class="header-item"  onclick="showForm('intermediate-form')"  >intermediate</p>
+        <p class="header-item"  onclick="showForm('advanced-form')"  >advanced</p>
+        <p class="header-item"  onclick="showForm('contact-form')"  >contact</p>
+        <p class="header-item"  onclick="showForm('Terms-form')"  >Terms and conditions</p>
+        <!-- detta är för inlogningen och kunde inte publiceras med hemsidan
+        <p class="header-item"  onclick="return confirm('Are u sure u want to log out')"  >logout</p>
+        <?php if (isset($_SESSION["user_id"])): ?>
+         <p class="header-item">You are logged in</p>
+        <?php else: ?>
+          <p class="header-item" id="link" onclick="location.href ='login.php';">login</p>
+        <?php endif; ?>
+        -->
+        </div>
+          </div>
+        </header>
+<body>
+  <div class="container">
+    <div class="form-box active" id="home-form">
+      <h2>Welcome to my instruction webbsite</h2>
+      <p>this is the central page for this instruction webbsite. 
+      <br>this webbsite includes 3 different levels of instruction.
+      <br>beginner, intermediate and advanced. 
+      <br>each level has its own instruction page with different topics and examples.
+      <br>you can navigate to each level by clicking on the links in the header bar.
+      <br>at the top of eac page is a short description of the level and its topics.
+      <!-- också för loggin
+      <br>you can also navigate back to the login page by clicking on the login link in the header bar.
+      -->
+      </p>
+    </div>
+  </div>
+   <div class="container">
+        <div class="form-box"  id="beginner-form">
+           <h3>C# Fundamentals</h3>
+<ul>
+  <li>Variables and data types</li>
+  <li>Control structures: conditionals, loops</li>
+  <li>Basic classes and methods</li>
+  <li>MonoBehaviour lifecycle methods: <code>Start()</code>, <code>Update()</code></li>
+</ul>
+
+<h3>Basic Scripting</h3>
+<ul>
+  <li>Moving objects with keyboard input</li>
+  <li>Physics-based movement with <code>Rigidbody</code></li>
+  <li>Basic collision detection: <code>OnCollisionEnter</code>, <code>OnTriggerEnter</code></li>
+</ul>
+
+<h3>Unity Features</h3>
+<ul>
+  <li>Creating UI elements (text, buttons)</li>
+  <li>Assigning scripts to GameObjects</li>
+  <li>Exploring the Asset Store</li>
+</ul>
+
+<div class="example">
+  <strong>Example Project:</strong> 2D Top-Down Character Controller<br>
+  Move a character sprite using arrow keys and add wall collisions.
+</div>
+
+<h1>variables and data types</h1>
+<p>
+  Creating variables and data types is the first step in learning C#.
+  <br><br>Variables are used to store data and can be of different types.
+  <br><br>The most common data types are int, float, string and bool.
+  <br><br>int is used to store whole numbers, float is used to store decimal numbers, string is used to store text and bool is used to store true or false values.
+  <br><br>You can create a variable by using the following syntax:
+  <br><br><code>int myInt = 5;</code>
+  <br><br>This creates a variable called myInt of type int and assigns it the value 5.
+  <br><br>You can also create multiple variables of the same type in one line by using commas:
+  <br><br><code>int myInt1 = 5, myInt2 = 10, myInt3 = 15;</code>
+  <br><br>This creates three variables of type int and assigns them the values 5, 10 and 15.
+  <br><br>You can also create variables of different types in one line by using semicolons:
+  <br><br><code>int myInt = 5; float myFloat = 5.5f; string myString = "Hello"; bool myBool = true;</code>
+  <br><br>This creates four variables of different types and assigns them the values 5, 5.5, "Hello" and true.
+  <br><br>You can also create variables without assigning them a value by using the following syntax:
+  <br><code>int myInt;</code>
+  <br><br>This creates a variable called myInt of type int without assigning it a value.
+  <br><br>You can assign a value to the variable later by using the following syntax:
+  <br><br><code>myInt = 5;</code>
+  <br><br>This assigns the value 5 to the variable myInt.
+  <br><br>You can also change the value of a variable by using the following syntax:
+  <br><br><code>myInt = 10;</code>
+  <br><br>This changes the value of the variable myInt to 10.
+  <br><br>You can also use variables in calculations by using the following syntax:
+  <br><br><code>int myInt1 = 5; int myInt2 = 10; int myInt3 = myInt1 + myInt2;</code>
+  <br><br>This creates two variables of type int and assigns them the values 5 and 10.
+  <br><br>It then creates a third variable of type int and assigns it the value of the first two variables added together.
+  <br><br>You can also use variables in calculations with different data types by using the following syntax:
+  <br><br><code>int myInt1 = 5; float myFloat1 = 5.5f; float myFloat2 = myInt1 + myFloat1;</code>
+  <br><br>This creates two variables of type int and float and assigns them the values 5 and 5.5.
+  <br><br>It then creates a third variable of type float and assigns it the value of the first two variables added together.
+  <br><br>You can also use variables in calculations with different data types by using the following syntax:
+  <br><br><code>int myInt1 = 5; string myString1 = "Hello"; string myString2 = myString1 + " World";</code>
+  <br><br>This creates two variables of type int and string and assigns them the values 5 and "Hello".
+  <br><br>It then creates a third variable of type string and assigns it the value of the first two variables added together.
+  <br><br>You can also use variables in calculations with different data types by using the following syntax:
+  <br><br><code>int myInt1 = 5; bool myBool1 = true; bool myBool2 = myBool1 && (myInt1 > 0);</code>
+  <br><br>This creates two variables of type int and bool and assigns them the values 5 and true. 
+  <br><br>It then creates a third variable of type bool and assigns it the value of the first two variables added together.
+  <br><br>You can also use variables in calculations with different data types by using the following syntax:
+  <br><br><code>int myInt1 = 5; bool myBool1 = true; bool myBool2 = myBool1 || (myInt1 > 0);</code>
+  <br><br>This creates two variables of type int and bool and assigns them the values 5 and true.
+</p>
+
+<h1>Control structures: conditionals, loops</h1>
+<p>
+  Control structures are used to control the flow of a program.
+  <br><br>They are used to make decisions and repeat actions.
+  <br><br>The most common control structures are conditionals and loops.
+  <br><br>Conditionals are used to make decisions based on a condition.
+  <br><br>They are used to execute a block of code if a condition is true and skip it if the condition is false.
+  <br><br>The most common conditional is the if statement.
+  <br><br>The if statement is used to execute a block of code if a condition is true.
+  <br><br>The syntax for the if statement is as follows:
+  <br><br><code>if (condition) { // code to execute if condition is true }</code>
+  <br><br>This executes the block of code inside the curly braces if the condition is true.
+  <br><br>You can also use the else statement to execute a block of code if the condition is false.
+  <br><br>The syntax for the else statement is as follows:
+  <br><br><code>if (condition) { // code to execute if condition is true } else { // code to execute if condition is false }</code>
+  <br><br>This executes the block of code inside the first curly braces if the condition is true and the block of code inside the second curly braces if the condition is false.
+  <br><br>You can also use the else if statement to check multiple conditions.  
+  <br><br>The syntax for the else if statement is as follows:
+  <br><br><code>if (condition1) { // code to execute if condition1 is true } else if (condition2) { // code to execute if condition2 is true } else { // code to execute if both conditions are false }</code>  
+  <br><br>This executes the block of code inside the first curly braces if condition1 is true, the block of code inside the second curly braces if condition2 is true and the block of code inside the third curly braces if both conditions are false.
+  <br><br>You can also use the switch statement to check multiple conditions.
+  <br><br>The syntax for the switch statement is as follows:
+  <br><br><code>switch (variable) { case value1: // code to execute if variable is equal to value1 break;<br> case value2: // code to execute if variable is equal to value2 break; default: // code to execute if variable is not equal to any of the values }</code>
+  <br><br>This executes the block of code inside the curly braces if the variable is equal to any of the values.
+  <br><br>You can also use the break statement to exit the switch statement.
+  <br><br>The break statement is used to exit a loop or switch statement.
+  <br><br>The syntax for the break statement is as follows:
+  <br><br><code>break;</code>
+  <br><br>This exits the loop or switch statement.
+  <br><br>You can also use the continue statement to skip the current iteration of a loop.
+  <br><br>The syntax for the continue statement is as follows:
+  <br><br><code>continue;</code>
+  <br><br>This skips the current iteration of the loop and continues to the next iteration.
+  <br><br>You can also use the return statement to exit a method and return a value.
+  <br><br>The syntax for the return statement is as follows:
+  <br><br><code>return value;</code>
+  <br><br>This exits the method and returns the value.
+  <br><br>You can also use the return statement to exit a method without returning a value.
+  <br><br>The syntax for the return statement is as follows:
+  <br><br><code>return;</code>
+  <br><br>This exits the method without returning a value.
+  <br><br>You can also use the break statement to exit a loop or switch statement.
+  <br><br>The syntax for the break statement is as follows:
+  <br><br><code>break;</code>
+  <br><br>This exits the loop or switch statement.
+</p>
+
+<h1>Basic classes and methods</h1>
+<p>
+  Classes are used to create objects in C#.
+  <br><br>They are used to define the properties and methods of an object.
+  <br><br>The most common class is the MonoBehaviour class.
+  <br><br>The MonoBehaviour class is used to create scripts in Unity.
+  <br><br>The syntax for creating a class is as follows:
+  <br><br><code>class ClassName { // properties and methods }</code>
+  <br><br>This creates a class called ClassName with properties and methods.
+  <br><br>You can also create a class that inherits from another class by using the following syntax:
+  <br><br><code>class ClassName : BaseClass { // properties and methods }</code>
+  <br><br>This creates a class called ClassName that inherits from the BaseClass with properties and methods.
+  <br><br>You can also create a class that implements an interface by using the following syntax:
+  <br><br><code>class ClassName : IInterface { // properties and methods }</code>
+  <br><br>This creates a class called ClassName that implements the IInterface with properties and methods.
+</p>
+
+<h1>MonoBehaviour lifecycle methods: <code>Start()</code>, <code>Update()</code></h1>
+<p>
+  The MonoBehaviour class has several lifecycle methods that are called at different times during the execution of a script.
+  <br><br>The most common lifecycle methods are the Start() and Update() methods.
+  <br><br>The Start() method is called when the script is first loaded.
+  <br><br>It is used to initialize the script and set up any variables or references.
+  <br><br>The syntax for the Start() method is as follows:
+  <br><br><code>void Start() { // code to execute when the script is first loaded }</code>
+  <br><br>This executes the block of code inside the curly braces when the script is first loaded.
+  <br><br>You can also use the Awake() method to initialize the script before the Start() method is called.
+  <br><br>The syntax for the Awake() method is as follows:
+  <br><br><code>void Awake() { // code to execute before the Start() method is called }</code>
+  <br><br>This executes the block of code inside the curly braces before the Start() method is called.
+  <br><br>You can also use the OnEnable() method to initialize the script when it is enabled.
+  <br><br>The syntax for the OnEnable() method is as follows:
+  <br><br><code>void OnEnable() { // code to execute when the script is enabled }</code>
+  <br><br>This executes the block of code inside the curly braces when the script is enabled.
+</p>
+
+<h1>Moving objects with keyboard input</h1>
+<p>
+  Moving objects with keyboard input is the first step in learning how to control objects in Unity.
+  <br><br>You can move an object by using the following syntax:
+  <br><br><code>transform.position = new Vector3(x, y, z);</code>
+  <br><br>This moves the object to the specified position in 3D space.
+  <br><br>You can also move an object by using the following syntax:
+  <br><br><code>transform.Translate(x, y, z);</code>
+  <br><br>This moves the object by the specified amount in 3D space.
+  <br><br>You can also move an object by using the following syntax:
+  <br><br><code>transform.Rotate(x, y, z);</code>
+  <br><br>This rotates the object by the specified amount in 3D space.
+  <br><br>You can also move an object by using the following syntax:
+  <br><br><code>transform.RotateAround(point, axis, angle);</code>
+  <br><br>This rotates the object around the specified point and axis by the specified angle.
+  <br><br>You can also move an object by using the following syntax:  
+  <br><br><code>transform.LookAt(target);</code>
+  <br><br>This rotates the object to look at the specified target.  
+  <br><br>You can also move an object by using the following syntax:
+  <br><br><code>transform.LookAt(target, up);</code>
+  <br><br>This rotates the object to look at the specified target with the specified up direction.
+</p>
+
+<h1>Physics-based movement with <code>Rigidbody</code></h1>
+<p>
+  Physics-based movement is used to create realistic movement in Unity.
+  <br><br>You can move an object using physics by adding a Rigidbody component to the object.
+  <br><br>You can then use the following syntax to move the object:
+  <br><br><code>Rigidbody.AddForce(Vector3 force);</code>
+  <br><br>This adds a force to the object in the specified direction.
+  <br><br>You can also use the following syntax to move the object:
+  <br><br><code>Rigidbody.AddTorque(Vector3 torque);</code>
+  <br><br>This adds a torque to the object in the specified direction.
+  <br><br>You can also use the following syntax to move the object:
+  <br><br><code>Rigidbody.MovePosition(Vector3 position);</code>
+  <br><br>This moves the object to the specified position using physics.
+</p>
+
+<h1>Basic collision detection: <code>OnCollisionEnter</code>, <code>OnTriggerEnter</code></h1>
+<p>
+  Collision detection is used to detect when two objects collide in Unity.
+  <br><br>You can detect collisions by using the following syntax:
+  <br><br><code>void OnCollisionEnter(Collision collision) { // code to execute when the object collides with another object }</code>
+  <br><br>This executes the block of code inside the curly braces when the object collides with another object.
+  <br><br>You can also use the following syntax to detect collisions:
+  <br><br><code>void OnTriggerEnter(Collider other) { // code to execute when the object enters a trigger collider }</code>
+  <br><br>This executes the block of code inside the curly braces when the object enters a trigger collider.
+  <br><br>You can also use the following syntax to detect collisions:
+  <br><br><code>void OnCollisionStay(Collision collision) { // code to execute when the object stays in contact with another object }</code>§
+  <br><br>This executes the block of code inside the curly braces when the object stays in contact with another object.
+</p>
+
+<h1>Creating UI elements (text, buttons)</h1>
+<p>
+  Creating UI elements is the first step in learning how to create user interfaces in Unity.
+  <br><br>You can create a UI element by using the following syntax:
+  <br><br><code>GameObject myText = new GameObject("Text");</code>
+  <br><br>This creates a new GameObject called Text.
+  <br><br>You can also create a UI element by using the following syntax:
+  <br><br><code>GameObject myButton = new GameObject("Button");</code>
+  <br><br>This creates a new GameObject called Button.
+  <br><br>You can also create a UI element by using the following syntax:
+  <br><br><code>GameObject myImage = new GameObject("Image");</code>
+  <br><br>This creates a new GameObject called Image.
+</p>
+
+<h1>Assigning scripts to GameObjects</h1>
+<p>
+  Assigning scripts to GameObjects is the first step in learning how to create scripts in Unity.
+  <br><br>You can assign a script to a GameObject by using the following syntax:
+  <br><br><code>GameObject myObject = new GameObject("MyObject");</code>
+  <br><br>This creates a new GameObject called MyObject.
+  <br><br>You can then assign a script to the GameObject by using the following syntax:
+  <br><br><code>myObject.AddComponent<MyScript>();</code>
+  <br><br>This adds the MyScript component to the MyObject GameObject.
+  <br><br>You can also assign a script to a GameObject by using the following syntax:
+  <br><br><code>myObject.AddComponent(typeof(MyScript));</code>
+  <br><br>This adds the MyScript component to the MyObject GameObject.
+</p>
+
+<h1>Exploring the Asset Store</h1>
+<p>
+  The Asset Store is a marketplace for Unity assets.
+  <br><br>You can find a variety of assets on the Asset Store, including models, textures, scripts and more.
+  <br><br>You can access the Asset Store by clicking on the Asset Store tab in the Unity editor.
+  <br><br>You can also access the Asset Store by clicking on the Asset Store button in the toolbar.
+  <br><br>You can also access the Asset Store by clicking on the Asset Store link in the menu bar.
+  <br><br>You can also access the Asset Store by clicking on the Asset Store link in the footer of the Unity website.  
+</p>
+
+<h1>Example Project: 2D Top-Down Character Controller</h1>
+<p>
+  The 2D Top-Down Character Controller is a simple project that demonstrates how to move a character sprite using arrow keys and add wall collisions.
+  <br><br>The project includes a character sprite, a wall sprite and a background sprite.
+  <br><br>The character sprite can be moved using the arrow keys and will collide with the wall sprite.
+  <br><br>The project also includes a simple UI that displays the current position of the character sprite.
+  <br><br>You can download the project from the Asset Store or create it from scratch using the instructions below.
+  <br><br>To create the project from scratch, follow these steps:
+  <ol>
+    <li>Create a new Unity project.</li>
+    <li>Create a new scene.</li>
+    <li>Add a new GameObject to the scene.</li>
+    <li>Add a new Sprite Renderer component to the GameObject.</li>
+    <li>Add a new Rigidbody2D component to the GameObject.</li>
+    <li>Add a new Box Collider2D component to the GameObject.</li>
+    <li>Add a new script to the GameObject.</li>
+    <li>Open the script in your code editor.</li>
+    <li>Copy and paste the code below into the script.</li>
+    <li>Save the script and return to Unity.</li>
+    <li>Press play to test the project.</li>
+  </ol>
+  <br><br>The code for the project is as follows:
+  <code>
+<br><br>
+using UnityEngine;
+<br><br>
+using System.Collections;
+<br><br>
+public class PlayerController : MonoBehaviour
+<br><br>
+{
+<br><br>
+    public float speed = 5.0f;
+    <br><br>
+    private Rigidbody2D rb;
+    <br><br>
+    private Vector2 moveInput;
+    <br><br>
+    private Vector2 moveVelocity;
+    <br><br>
+    <br><br>
+
+    void Start()
+    <br><br>
+    {
+      <br><br>
+        rb = GetComponent<Rigidbody2D>();
+          <br><br>
+    }
+    <br><br><br>
+
+    void Update()
+    <br><br>
+    {
+      <br><br>
+        moveInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        <br><br>
+        moveVelocity = moveInput.normalized * speed;
+        <br><br>
+    }
+    <br><br><br>
+
+    void FixedUpdate()
+    <br><br>
+    {
+      <br><br>
+        rb.MovePosition(rb.position + moveVelocity * Time.fixedDeltaTime);
+        <br><br>
+    }
+    <br><br>
+    void OnCollisionEnter2D(Collision2D collision)
+    <br><br>
+    {
+      <br><br>
+        if (collision.gameObject.CompareTag("Wall"))
+        <br><br>
+        {
+          <br><br>
+            Debug.Log("Collided with wall");
+            <br><br>
+        }
+        <br><br>
+    }
+    <br><br>
+}
+
+
+  </code>
+</p>
+                
+           
+        </div>
+   </div>
+
+   <div class="container">
+        <div class="form-box"  id="intermediate-form">
+<h3>Intermediate C# Concepts</h3>
+<h3>Unity Features</h3>
+<ul>
+    <li>Animation using Animator and Mecanim</li>
+    <li>Navigation and AI pathfinding</li>
+    <li>Raycasting and layer masks</li>
+    <li>Unity's Input System</li>
+</ul>
+
+<h3>Architecture Patterns</h3>
+<ul>
+  <li>Separation of concerns</li>
+  <li>MVC or MVVM patterns</li>
+  <li>State machines for gameplay logic</li>
+</ul>
+
+<h3>Scene & Asset Management</h3>
+<ul>
+  <li>Scene loading (additive and single)</li>
+  <li>Addressables for asset optimization</li>
+</ul>
+
+<div class="example">
+  <strong>Example Project:</strong> 3D Puzzle Adventure Game<br>
+  Animated characters, multi-scene transitions, raycasting interactions, and a ScriptableObject-based inventory system.
+</div>
+
+<h1>Animation using Animator and Mecanim</h1>
+<p>
+    Animation is a key part of game development in Unity.
+    <br><br>Unity provides a powerful animation system called Mecanim that allows you to create and control animations for your GameObjects.
+    <br><br>You can create animations using the Animation window in Unity, which allows you to record and edit animations for your GameObjects.
+    <br><br>You can also use the Animator component to control animations for your GameObjects.
+    <br><br>The Animator component allows you to create animation states and transitions between them.
+    <br><br>You can also use the Animator component to control the speed and direction of animations.
+    <br><br>You can create an Animator Controller to manage your animations and assign it to the Animator component.
+    <br><br>The Animator Controller allows you to create animation states and transitions between them. 
+    <br><br>You can also use the Animator Controller to control the speed and direction of animations.
+    <br><br>You can create animation clips to define the animations for your GameObjects.
+    <br><br>Animation clips are created using the Animation window in Unity, which allows you to record and edit animations for your GameObjects.
+    <br><br>You can also use the Animation window to create animation curves to control the speed and direction of animations.
+    <br><br>You can also use the Animation window to create animation events to trigger actions at specific points in an animation.
+    <br><br>Animation events are used to trigger actions at specific points in an animation.
+    <br><br>You can create animation events using the Animation window in Unity, which allows you to record and edit animations for your GameObjects.
+    <br><br>You can also use the Animation window to create animation curves to control the speed and direction of animations.
+    <br><br>You can also use the Animation window to create animation events to trigger actions at specific points in an animation.
+    <br><br>Animation events are used to trigger actions at specific points in an animation.
+    <br><br>You can create animation events using the Animation window in Unity, which allows you to record and edit animations for your GameObjects.
+    <br><br>You can also use the Animation window to create animation curves to control the speed and direction of animations.
+    <br><br>You can also use the Animation window to create animation events to trigger actions at specific points in an animation.
+    <br><br>Animation events are used to trigger actions at specific points in an animation.
+</p>
+
+<h1>Navigation and AI pathfinding</h1>
+<p>
+    Navigation and AI pathfinding are important aspects of game development in Unity.
+    <br><br>Unity provides a powerful navigation system that allows you to create and control navigation for your GameObjects.
+    <br><br>You can create a NavMesh to define the walkable areas in your scene.
+    <br><br>You can also use the NavMesh Agent component to control the movement of your GameObjects on the NavMesh.
+    <br><br>The NavMesh Agent component allows you to set the speed, acceleration, and stopping distance for your GameObjects.
+    <br><br>You can also use the NavMesh Agent component to control the rotation and avoidance of your GameObjects.
+    <br><br>You can create a NavMesh Obstacle component to define obstacles in your scene that affect navigation.
+    <br><br>You can also use the NavMesh Obstacle component to control the size and shape of obstacles in your scene.
+    <br><br>You can also use the NavMesh Obstacle component to control the avoidance of obstacles in your scene.
+</p>
+
+<h1>Raycasting and layer masks</h1>
+<p> 
+    Raycasting is a powerful feature in Unity that allows you to detect collisions and interactions with GameObjects in your scene.
+    <br><br>You can use raycasting to detect collisions with GameObjects, trigger events, and perform actions based on the results of the raycast.
+    <br><br>You can create a raycast using the following syntax:
+    <br><br><code>RaycastHit hit; if (Physics.Raycast(ray, out hit)) { // code to execute if the ray hits a GameObject }</code>
+    <br><br>This executes the block of code inside the curly braces if the ray hits a GameObject.
+    <br><br>You can also use layer masks to filter the results of a raycast.
+    <br><br>You can create a layer mask using the following syntax:
+    <br><br><code>int layerMask = 1 << LayerMask.NameToLayer("LayerName");</code>
+    <br><br>This creates a layer mask for the specified layer name.
+    <br><br>You can then use the layer mask in a raycast using the following syntax:
+    <br><br><code>RaycastHit hit; if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask)) { // code to execute if the ray hits a GameObject in the specified layer }</code>
+    <br><br>This executes the block of code inside the curly braces if the ray hits a GameObject in the specified layer.
+    <br><br>You can also use layer masks to filter the results of a raycast using the following syntax:
+    <br><br><code>RaycastHit hit; if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask, QueryTriggerInteraction.Ignore)) { // code to execute if the ray hits a GameObject in the specified layer and ignores triggers }</code>
+    <br><br>This executes the block of code inside the curly braces if the ray hits a GameObject in the specified layer and ignores triggers.
+</p>
+
+<h1>Unity's Input System</h1>
+<p>
+    Unity's Input System is a powerful feature that allows you to handle user input in your games.
+    <br><br>You can use the Input System to handle keyboard, mouse, and gamepad input.
+    <br><br>You can create an Input Action Asset to define your input actions and bindings.
+    <br><br>You can then use the Input Action Asset in your scripts to handle input.
+    <br><br>You can create an Input Action using the following syntax:
+    <br><br><code>InputAction action = new InputAction("ActionName", binding: "<Keyboard>/space");</code>
+    <br><br>This creates an Input Action called ActionName that is bound to the space key on the keyboard.
+    <br><br>You can then use the Input Action in your scripts to handle input using the following syntax:
+    <br><br><code>action.performed += ctx => { // code to execute when the action is performed }</code>
+    <br><br>This executes the block of code inside the curly braces when the action is performed.
+    <br><br>You can also use the Input System to handle input from gamepads using the following syntax:
+    <br><br><code>InputAction action = new InputAction("ActionName", binding: "<Gamepad>/buttonSouth");</code>
+    <br><br>This creates an Input Action called ActionName that is bound to the south button on the gamepad.
+    <br><br>You can then use the Input Action in your scripts to handle input from the gamepad using the following syntax:
+    <br><br><code>action.performed += ctx => { // code to execute when the action is performed }</code>
+    <br><br>This executes the block of code inside the curly braces when the action is performed.
+</p>
+
+<h1>Seperation of concerns</h1>
+<p>
+    Separation of concerns is a software design principle that promotes the separation of different aspects of a program into distinct sections.
+    <br><br>In Unity, this can be achieved by organizing your code into different scripts and components.
+    <br><br>You can create separate scripts for different aspects of your game, such as player movement, enemy AI, and UI management.
+    <br><br>This allows you to keep your code organized and maintainable.
+    <br><br>You can also use ScriptableObjects to store data and logic that can be shared between different scripts and components.
+    <br><br>ScriptableObjects are a powerful feature in Unity that allows you to create reusable data containers that can be used in multiple places in your game.
+    <br><br>You can create a ScriptableObject using the following syntax:
+    <br><br><code>public class MyScriptableObject : ScriptableObject { // data and logic }</code>
+    <br><br>This creates a ScriptableObject called MyScriptableObject that can be used to store data and logic.
+</p>
+
+<h1>MVC or MVVM patterns</h1>
+<p>
+    MVC (Model-View-Controller) and MVVM (Model-View-ViewModel) are software design patterns that promote the separation of concerns in your code.
+    <br><br>In Unity, you can use these patterns to organize your code and keep it maintainable.
+    <br><br>In the MVC pattern, the Model represents the data and logic of your game, the View represents the user interface, and the Controller handles user input and updates the Model and View.
+    <br><br>You can create a Model using a class that contains data and logic, a View using a UI component, and a Controller using a script that handles user input.
+    <br><br>In the MVVM pattern, the Model represents the data and logic of your game, the View represents the user interface, and the ViewModel acts as an intermediary between the Model and View.
+    <br><br>You can create a ViewModel using a class that contains data and logic, a View using a UI component, and a Model using a class that contains data and logic.
+    <br><br>This allows you to keep your code organized and maintainable, while also promoting the separation of concerns in your code.
+</p>
+
+<h1>State machines for gameplay logic</h1>
+<p>
+    State machines are a powerful tool for managing the state of your game objects and controlling their behavior.
+    <br><br>You can use state machines to define different states for your game objects and transition between them based on events or conditions.
+    <br><br>You can create a state machine using a class that contains different states and methods for transitioning between them.
+    <br><br>You can also use Unity's Animator component to create state machines for your game objects.
+    <br><br>The Animator component allows you to create animation states and transitions between them, which can be used to control the behavior of your game objects.
+    <br><br>You can create an Animator Controller to manage your animation states and transitions, and assign it to the Animator component.
+    <br><br>You can then use the Animator component to control the behavior of your game objects based on their current state.
+    <br><br>You can also use the Animator component to control the speed and direction of animations based on the current state of your game objects.
+    <br><br>This allows you to create complex behaviors for your game objects and manage their state in a clean and organized way.
+</p>
+
+<h1>Scene loading (additive and single)</h1>
+<p>
+    Scene loading is a powerful feature in Unity that allows you to load and unload scenes dynamically during runtime.
+    <br><br>You can load scenes additively or as single scenes, depending on your needs.
+    <br><br>To load a scene additively, you can use the following syntax:
+    <br><br><code>SceneManager.LoadScene("SceneName", LoadSceneMode.Additive);</code>
+    <br><br>This loads the specified scene in addition to the currently loaded scenes.
+    <br><br>You can also load a scene as a single scene using the following syntax:
+    <br><br><code>SceneManager.LoadScene("SceneName", LoadSceneMode.Single);</code>
+    <br><br>This replaces the currently loaded scenes with the specified scene.
+    <br><br>You can also unload a scene using the following syntax:
+    <br><br><code>SceneManager.UnloadSceneAsync("SceneName");</code>
+    <br><br>This unloads the specified scene asynchronously, allowing you to continue executing code while the scene is being unloaded.
+    <br><br>You can also use the SceneManager to manage multiple scenes in your game, allowing you to create complex game worlds with multiple levels and areas.
+</p>
+
+<h1>Addressables for asset optimization</h1>
+<p>
+    Addressables is a powerful feature in Unity that allows you to manage and optimize your game assets.
+    <br><br>You can use Addressables to load and unload assets dynamically during runtime, which can help reduce memory usage and improve performance.
+    <br><br>You can create an Addressable Asset using the following syntax:
+    <br><br><code>AddressableAssetSettings.CreateAsset("AssetName", typeof(MyAssetType));</code>
+    <br><br>This creates an Addressable Asset called AssetName of type MyAssetType.
+    <br><br>You can then load the Addressable Asset using the following syntax:
+    <br><br><code>Addressables.LoadAssetAsync<MyAssetType>("AssetName").Completed += handle => { // code to execute when the asset is loaded }</code>
+    <br><br>This executes the block of code inside the curly braces when the asset is loaded.
+    <br><br>You can also unload the Addressable Asset using the following syntax:
+    <br><br><code>Addressables.Release(handle);</code>
+    <br><br>This releases the handle for the Addressable Asset, allowing it to be unloaded from memory.
+    <br><br>You can also use Addressables to manage and optimize your game assets, allowing you to create complex game worlds with multiple levels and areas.
+</p>
+
+<div class="example">
+  <strong>Example Project:</strong> 3D Puzzle Adventure Game<br>>
+
+
+  <p>Features animated characters, multi-scene transitions, raycasting interactions, and a ScriptableObject-based inventory system.</p>
+    <p>Includes a character controller, AI pathfinding for NPCs, and a UI system using Unity's new Input System.</p>
+    <p>Utilizes Addressables for efficient asset management and scene loading.</p>
+    <p>Demonstrates state machines for gameplay logic, such as character states (idle, walking, interacting) and NPC behaviors.</p>
+    <p>Includes a simple AI system for NPCs that uses raycasting for interactions and pathfinding to navigate the environment.</p>
+    <p>Utilizes Unity's Animator for character animations and transitions between different states.</p>
+    <p>Features a modular architecture with separation of concerns, using ScriptableObjects for data management and reusable components.</p>
+    <ol>
+      <li>CharacterController.cs - Handles player movement and interactions</li>
+      <li>NPCController.cs - Manages NPC behaviors and AI pathfinding</li>
+      <li>InventorySystem.cs - Implements a ScriptableObject-based inventory system</li>
+      <li>UIManager.cs - Manages the UI elements and interactions</li>
+      <li>GameManager.cs - Controls scene transitions and game state management</li>
+    </ol>
+    <p>To create the project, follow these steps:</p>
+    <ol>
+      <li>Create a new Unity project and set up the necessary scenes.</li>
+      <li>Import the required assets from the Asset Store or create your own.</li>
+      <li>Set up the character controller and NPCs with Rigidbody and Collider components.</li>
+      <li>Implement the scripts for character movement, AI pathfinding, and inventory management.</li>
+      <li>Create UI elements using Unity's UI system and connect them to the scripts.</li>
+      <li>Use Addressables to manage assets and scenes efficiently.</li>
+      <li>Test the game mechanics and refine the gameplay experience.</li>
+    </ol>
+  <p>By following these steps, you can create a comprehensive 3D puzzle adventure game that showcases intermediate C# concepts in Unity.</p>
+
+
+
+</div>
+
+
+        </div>
+   </div>
+<!--this part is unfinished due to time constraints -->
+   <div class="container">
+        <div class="form-box"  id="advanced-form">
+<h3>Advanced C# Concepts</h3>
+          <h3>Multiplayer & Networking</h3>
+            <ul>
+              <li>Netcode for GameObjects / Mirror / Photon</li>
+              <li>Syncing variables, RPCs, and networked scene management</li>
+            </ul>
+            
+          <h3>Shader Programming & Graphics</h3>
+            <ul>
+              <li>Custom shaders in HLSL or Shader Graph</li>
+              <li>Post-processing customization</li>
+              <li>GPU instancing and SRP (URP/HDRP)</li>
+            </ul>
+
+          <h3>Tooling & Automation</h3>
+            <ul>
+              <li>Custom Unity Editor tools and windows</li>
+              <li>Automated builds and CI/CD integration</li>
+              <li>Automated testing with Unity Test Framework</li>
+            </ul>
+
+          <h3>Game Architecture</h3>
+            <ul>
+              <li>ECS (Entity Component System)</li>
+              <li>Modular system design</li>
+              <li>Data-driven gameplay logic</li>
+            </ul>
+
+<div class="example">
+  <strong>Example Project:</strong> Multiplayer Arena Shooter<br>
+  Features matchmaking, real-time multiplayer, optimized graphics and a custom UI using UXML & USS.
+</div>
+                
+           
+        </div>
+   </div>
+   <div class="container">
+        <div class="form-box"  id="contact-form">
+<h3>Contact Us</h3>
+<p>If you have any questions or feedback, please reach out to us at:</p>
+<ul>
+  <li>Email: <a id="emailLink" href="#" >Arvid.Borgeson@me.com</a></li>
+  <li>Phone: 0706613800</li>
+</ul>
+        </div>
+   </div>
+
+   <div class="container">
+        <div class="form-box"  id="Terms-form">
+<h3>Terms of service</h3>
+<p>Arvid Börgeson 2025. Alla rättigheter förbehållna</p>
+<ul>
+  <li>Allt innehåll på denna webbplats,
+    inklusive men inte begränsat till text, 
+    bilder, 
+    grafik,
+    logotyper,
+    videor och design,
+    är skyddat enligt lagen om upphovsrätt och tillhör
+    Arvid Börgeson, om inte annat anges.
+    Det är inte tillåtet att kopiera,
+    distribuera, 
+    modifiera 
+    eller återpublicera något material utan skriftligt tillstånd 
+    från upphovsrättsinnehavaren.
+</li>
+  <li>För frågor om användning av innehåll, vänligen kontakta: <a id="emailLink" href="#" >Arvid.Borgeson@me.com</a>.</li>
+</ul>
+        </div>
+   </div>
+</body>
+
+<script src="index.js"></script>
+</html>
+
